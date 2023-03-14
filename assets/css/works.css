@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.works-page{
+  margin:3rem 5rem;
+}
+.work-wrapper{
+  color:#333;
+}
+.contents-wrap{
+  text-align: left;
+}
+.contents-item{
+  display:flex;
+}
+.contents-item__dt:after{
+  content:"：";
+}
+.w-detail-item{
+  display:flex;
+}
+.w-detail-item__dt:after{
+  content:"：";
+}
+.detail{
+ border-bottom:solid 1px #333; ; 
+}

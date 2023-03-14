@@ -1,49 +1,38 @@
 @charset "UTF-8";
 
 
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;900&family=Outfit:wght@500;600&family=Playfair+Display:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Outfit:wght@700&family=Playfair+Display:wght@700;900&family=Shippori+Mincho:wght@400;500&display=swap');
+
 
 
 body{
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight:500;
+  font-family: 'Shippori Mincho', serif;
+  font-weight:400;
+  color:#7d97b8;
+  background-image: url(../img/bg.webp);
   letter-spacing: .05;
-  line-height:1.5;
+  line-height:1.8;
 }
 .first-view{
   height:100vh;
 }
-.header{
-  background: rgba(0,0,0,0.0);
-  height: auto;
-  position: fixed;
-  width: 100%;
-  max-width: 1280px;
-  inset: 0;
-  margin: auto;
-  margin-top:2rem;
-  z-index: 100;
-}
+
 .header-items{
-  align-content: center;
-  align-items: center;
-  background: #ffffff;
-  border: solid 1px #000;
-  border-radius: 128px;
   display: flex;
-  flex: 1;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 60px;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: 0px 6rem;
-  width: auto;
-  z-index: 0;
-  max-width: calc(100% - 60px);
+    flex-direction: row;
+    height: 100%;
+    padding-top: 1.5rem;
+    position: fixed;
+    right: 1.4rem;
+    top: 0;
+    writing-mode: vertical-lr;
+    z-index: 10;
 }
 .header-item{
-  font-family: 'Outfit', sans-serif;
+  font-family: 'EB Garamond', serif;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.5rem;
+  font-size:1rem;
 }
 .fv-wrapper{
   position:relative;
@@ -63,9 +52,12 @@ body{
   right:0;
   font-size:10rem;
   line-height: 0.8;
-  color:#ebebeb;
+  color: transparent;
+  -webkit-text-stroke: 1px #7d97b8;
+  text-stroke: 1px #7d97b8;
   z-index:1;
   text-align: right;
+  font-family: 'Playfair Display', serif;
   font-weight:700;
 }
 
@@ -73,11 +65,12 @@ body{
 .section-title{
   font-size:5rem;
   margin-bottom:5rem;
-  font-family: 'Outfit', sans-serif;
-  font-weight:600;
+  font-family: 'EB Garamond', serif;
+  font-weight:500;
+  letter-spacing: 0.1em;
 }
 .container{
-  max-width:1080px;
+  max-width:1280px;
   margin-top:20rem;
   margin-left: auto;
   margin-right: auto; 
@@ -92,7 +85,7 @@ body{
   padding:0 5rem;
 }
 .about-img{
-  border:solid 1px #333;
+  border:solid 1px #7d97b8; 
   height:450px;
 }
 .introduction{
@@ -101,18 +94,39 @@ body{
 .introduction__name{
   display:flex;
   margin:3rem 0;
+  align-items: center;
 }
 .name{
   font-size:2rem;
 }
 .sns-icon{
   display:flex;
+  align-items: flex-end;
 }
 .sns-icons__item{
-  width:100%;
+  object-fit: cover;
+    height: 1.2rem;
+    margin: 0 1rem;
+    width: auto;
 }
 .introduction__sentence{
   transform:translateY(20%);
+}
+
+@media screen and (max-width: 768px) {
+  .about-wrapper{
+    display:block;
+    justify-content: space-between;
+    padding:0 5rem;
+  }
+  .introduction{
+    margin-left:0;
+  }
+  .introduction__name{
+    display:flex;
+    justify-content: space-between;
+  }
+ 
 }
 
 .skill-wrapper{
@@ -122,7 +136,7 @@ body{
   margin-bottom:4rem;
 }
 .skill-title{
-  border-bottom:solid 1px #333;
+  border-bottom:solid 1px #7d97b8;
   margin-bottom:3rem;
 }
 .skill-item-number{
@@ -132,8 +146,9 @@ body{
 .skill-item-content{
   position:relative;
   font-size:3rem;
-  font-family: 'Outfit', sans-serif;
-  font-weight:500;
+  font-family: 'EB Garamond', serif;
+  font-weight:400;
+  letter-spacing: 0.03em;
 }
 .skill-item-description__wrapper{
   margin:0 2rem;
@@ -141,7 +156,7 @@ body{
 .tools{
   margin-top:2rem;
   font-size:0.8rem;
-  color:#666;
+  color:#8D8C8C;
 }
 
 
@@ -151,15 +166,15 @@ body{
   flex-wrap:wrap
 }
 .work-items{
-  margin:0 3rem;
+  margin:0 2rem;
   margin-bottom:5rem;
 }
 .work-image{
-  margin-bottom:1rem;
+  margin-bottom:1.5rem;
+  object-fit: contain;
 }
 .work-category{
-  margin-bottom:0.5rem;
-  color:#666;
+  color:#8D8C8C;
 }
 
 .Form {
@@ -184,6 +199,9 @@ body{
   justify-content: center;
 }
 @media screen and (max-width: 480px) {
+  .contact-message__text{
+    margin: 1rem 4.5vw;
+  }
   .Form-Item {
     padding-left: 14px;
     padding-right: 14px;
@@ -216,13 +234,12 @@ body{
   }
 }
 .Form-Item-Input{
-  border: 1px solid #333;
+  border: 1px solid #7d97b8;
   margin-left: 40px;
   padding-left: 1em;
   padding-right: 1em;
   height: 48px;
   flex: 1;
-  /* width: 100%; */
   max-width: 500px;
   font-size: 18px;
 }
@@ -237,7 +254,7 @@ body{
   }
 }
 .Form-Item-Textarea {
-  border: 1px solid #333;
+  border: 1px solid #7d97b8;
   margin-left: 40px;
   padding-left: 1em;
   padding-right: 1em;
@@ -266,11 +283,18 @@ body{
 }
 
 .button1{
-  border:solid 1px #333;
+  border:solid 1px #7d97b8;
 }
 .button1__box{
   padding:1rem 4rem;
   letter-spacing: .5em;
+}
+
+.footer{ 
+  text-align: center;
+}
+.footer-message{
+  font-size: 4rem;
 }
 
 
