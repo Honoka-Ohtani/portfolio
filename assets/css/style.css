@@ -38,7 +38,7 @@ body{
 .header-item{
   font-family: 'EB Garamond', serif;
   letter-spacing: 0.04em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
   font-size:1rem;
 }
 .fv-wrapper{
@@ -60,8 +60,8 @@ body{
   font-size:10rem;
   line-height: 0.8;
   color: transparent;
-  -webkit-text-stroke: 1px #7d97b8;
-  text-stroke: 1px #7d97b8;
+  -webkit-text-stroke: 1px rgba(125,151,184,1);
+  text-stroke: 1px rgba(125,151,184,0.4);
   z-index:1;
   text-align: right;
   font-family: 'Playfair Display', serif;
@@ -75,6 +75,27 @@ body{
   font-family: 'EB Garamond', serif;
   font-weight:500;
   letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 768px) {
+  .index-logo{
+    padding:1.5rem 0 0 1rem;
+  }
+  .title-copy{
+    transform:translateY(100%);
+    font-size:5rem;
+  }
+  .background-copy{
+    transform:translateY(50%);
+    font-size:3.5rem;
+  }
+ .header-items{
+  top:1rem;
+  right:1rem;
+ }
+ .header-item{
+  font-size:0.7rem;
+ }
 }
 .container{
   max-width:1280px;
@@ -121,10 +142,21 @@ body{
 }
 
 @media screen and (max-width: 768px) {
+  .container{
+    max-width:350px;
+    margin-top:15rem;
+  }
+  .about{
+    margin-top:5rem;
+  }
+  .section-title{
+    font-size:3rem;
+    margin-bottom:3rem;
+  }
   .about-wrapper{
     display:block;
     justify-content: space-between;
-    padding:0 5rem;
+    padding:0;
   }
   .introduction{
     margin-left:0;
@@ -132,8 +164,17 @@ body{
   .introduction__name{
     display:flex;
     justify-content: space-between;
+    margin:2rem 0 0;
   }
- 
+  .name{
+    font-size:1.6rem;
+  }
+  .sns-icons__item{
+    object-fit: cover;
+      height: 1rem;
+      margin: 0.5rem;
+      width: auto;
+  }
 }
 
 .skill-wrapper{
@@ -165,7 +206,14 @@ body{
   font-size:0.8rem;
   color:#8D8C8C;
 }
-
+@media screen and (max-width: 768px) {
+  .skill-wrapper{
+    padding:0rem;
+  }
+  .skill-item-content{
+    font-size:2rem;
+  }
+}
 
 .work-wrapper{
   display:flex;
@@ -191,6 +239,11 @@ body{
 }
 .footer-message{
   font-size: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .footer-message{
+    font-size:2rem;
+  }
 }
 
 
