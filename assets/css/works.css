@@ -3,6 +3,10 @@
 .works-page{
   margin:3rem 5rem;
 }
+.work-title{
+  font-size:2.4rem;
+  text-align:left;
+}
 .work-wrapper{
   color:#333;
 }
@@ -23,4 +27,8 @@
 }
 .detail{
  border-bottom:solid 1px #333; ; 
+}
+.link-text{
+  font-weight:600;
+  border-bottom:solid 1px #333
 }
